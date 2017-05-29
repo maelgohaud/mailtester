@@ -8,7 +8,9 @@ app.get('/', function (req, res) {
     'teaast3@gmail.com',
     'test1@gmail.com',
     'test2@gmail.com',
-    'maelgohaud@gmail.com'
+    'maelgohaud@gmail.com',
+    'aurelien.merdassi@blacksales.co',
+    'sebastien.burgain@blacksales.co'
 ];
  
   validator.verifyEmails(domain, emails, {}, function(err, data){
