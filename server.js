@@ -1,20 +1,15 @@
 const express = require('express');
-const validator = require('bulk-email-verifier');
+const verifier = require('email-verify');
 const app = express();
 
 app.get('/', function (req, res) {
-  var domain = 'gmail.com';
-  var emails =  [
-    'teaast3@gmail.com',
-    'test1@gmail.com',
-    'test2@gmail.com',
-    'maelgohaud@gmail.com',
-    'aurelien.merdassi@blacksales.co',
-    'sebastien.burgain@blacksales.co'
-];
- 
-  validator.verifyEmails(domain, emails, {}, function(err, data){
-    console.log("Email Stats: ", err, data);	
+
+verifier.verify( 'aurelien.merdassi@blacksales.co', function( err, info ){
+  if( err ) console.log(err);
+  else{
+    console.log( "Success (T/F): " + info.success );
+    console.log( "Info: " + info.info );
+  }
 });
 });
 

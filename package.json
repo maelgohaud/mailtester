@@ -6,7 +6,6 @@
   "repository": "",
   "author": "Mostafa Eweda <mo.eweda@gmail.com>",
   "dependencies": {
-    "bulk-email-verifier": "^1.0.4",
     "email-existence": "^0.1.5",
     "email-verify": "^0.1.1",
     "express": "~3.2.4",
